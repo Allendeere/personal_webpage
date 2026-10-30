@@ -1,0 +1,124 @@
+{
+  "desktop": {
+    "width": 1440,
+    "documentWidth": 1440,
+    "images": [
+      {
+        "src": "/brand/sarah-mark.png",
+        "loaded": true
+      },
+      {
+        "src": "/projects/nspy/05.webp",
+        "loaded": true
+      },
+      {
+        "src": "/projects/nspy/05.webp",
+        "loaded": true
+      },
+      {
+        "src": "/projects/magnetic/02.webp",
+        "loaded": true
+      },
+      {
+        "src": "/projects/rhythm/03.webp",
+        "loaded": true
+      },
+      {
+        "src": "/projects/corporate/00.webp",
+        "loaded": true
+      },
+      {
+        "src": "/projects/speech/01.webp",
+        "loaded": true
+      },
+      {
+        "src": "/projects/rental/03.webp",
+        "loaded": true
+      },
+      {
+        "src": "/projects/pdf/00.webp",
+        "loaded": true
+      },
+      {
+        "src": "/projects/launcher/01.webp",
+        "loaded": true
+      },
+      {
+        "src": "/brand/sarah-mark.png",
+        "loaded": true
+      },
+      {
+        "src": "/brand/sarah-mark.png",
+        "loaded": true
+      }
+    ],
+    "bodyFont": "\"Geist Variable\", \"Noto Sans TC\", \"Microsoft JhengHei\", sans-serif",
+    "h1Size": "95.04px",
+    "bodySize": "18px",
+    "descriptionSize": "18px",
+    "minimumTextSize": 14,
+    "background": "rgba(0, 0, 0, 0)",
+    "errors": []
+  },
+  "mobile": {
+    "width": 390,
+    "documentWidth": 390,
+    "images": [
+      {
+        "src": "/brand/sarah-mark.png",
+        "loaded": true
+      },
+      {
+        "src": "/projects/nspy/05.webp",
+        "loaded": true
+      },
+      {
+        "src": "/projects/nspy/05.webp",
+        "loaded": true
+      },
+      {
+        "src": "/projects/magnetic/02.webp",
+        "loaded": true
+      },
+      {
+        "src": "/projects/rhythm/03.webp",
+        "loaded": true
+      },
+      {
+        "src": "/projects/corporate/00.webp",
+        "loaded": true
+      },
+      {
+        "src": "/projects/speech/01.webp",
+        "loaded": true
+      },
+      {
+        "src": "/projects/rental/03.webp",
+        "loaded": true
+      },
+      {
+        "src": "/projects/pdf/00.webp",
+        "loaded": true
+      },
+      {
+        "src": "/projects/launcher/01.webp",
+        "loaded": true
+      },
+      {
+        "src": "/brand/sarah-mark.png",
+        "loaded": true
+      },
+      {
+        "src": "/brand/sarah-mark.png",
+        "loaded": true
+      }
+    ],
+    "bodyFont": "\"Geist Variable\", \"Noto Sans TC\", \"Microsoft JhengHei\", sans-serif",
+    "h1Size": "46.8px",
+    "bodySize": "18px",
+    "descriptionSize": "18px",
+    "minimumTextSize": 14,
+    "background": "rgba(0, 0, 0, 0)",
+    "errors": []
+  }
+}
