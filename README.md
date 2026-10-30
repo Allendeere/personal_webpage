@@ -16,14 +16,27 @@ npm.cmd run dev
 
 ## 發布到 GitHub Pages
 
-1. 將**整個專案根目錄**的原始碼推送至 GitHub 儲存庫的 `main` 分支，包含 `.github`、`personal_webpage.client` 與作品素材。
+1. 將**整個專案根目錄**的原始碼推送至 GitHub 儲存庫的 `master`（本專案使用）或 `main` 分支，包含 `.github`、`personal_webpage.client` 與作品素材。
 2. 在 GitHub 儲存庫的 **Settings → Pages → Build and deployment → Source** 選擇 **GitHub Actions**。
-3. `.github/workflows/deploy.yml` 會在推送 `main` 時自動建置及發布。也可以從 **Actions → Deploy portfolio to GitHub Pages → Run workflow** 手動執行。
+3. `.github/workflows/deploy.yml` 會在推送 `master` 或 `main` 時自動建置及發布。也可以從 **Actions → Deploy portfolio to GitHub Pages → Run workflow** 手動執行。
 4. 等待 Actions 完成；發布網址會顯示在部署工作與 Settings → Pages。
 
-若預設分支不是 `main`，請調整 workflow 中的 `branches`。這套流程依據 [GitHub Pages 官方自訂 workflow 文件](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) 設定。
+儲存庫的預設分支應設為包含網站與 workflow 的 `master` 或 `main`，手動執行 workflow 才能正常使用。這套流程依據 [GitHub Pages 官方自訂 workflow 文件](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) 設定。
 
-目前只完成本機實作與發布設定，尚未推送或發布到你的 GitHub 帳號。
+正式網站網址：<https://allendeere.github.io/personal_webpage/>。
+
+### 使用 npm run deploy
+
+先將要發布的原始碼變更 commit，再執行：
+
+```powershell
+cd personal_webpage.client
+npm.cmd run deploy
+```
+
+指令會自動建置、推送目前分支的 commit、啟動或接續 GitHub Actions，並等待發布結果。它使用 Git 已儲存的 GitHub 登入，不會輸出或儲存 token，也不會自動 commit 尚未確認的修改。若工作目錄還有未提交的變更，會提示先 commit。
+
+此專案使用 GitHub Actions 發布，不需要安裝 `gh-pages`、執行 `gh-pages -d dist`，或將 Pages 切換成 Deploy from a branch。已存在的 `gh-pages` 分支不影響此流程。
 
 網站使用相對資源路徑與 hash 專案連結，可部署到 `username.github.io/repository/` 或自訂網域，重新整理專案詳情不需要伺服器路由設定。不需要執行 ASP.NET Server 專案。
 
