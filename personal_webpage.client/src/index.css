@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Geist Variable'; font-style: normal; font-display: swap; font-weight: 100 900;
+  src: url('@fontsource-variable/geist/files/geist-latin-wght-normal.woff2') format('woff2');
+}
+
+:root {
+  font-family: 'Geist Variable', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  color: var(--text); background: var(--background); font-synthesis: none; text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color-scheme: light;
+  font-size: 100%; line-height: 1.7;
+  --background: #fafafa; --surface: #f0f1f3; --surface-raised: #e5e7eb;
+  --text: #141519; --muted: #50545d; --subtle: #626771; --line: #d9dce2; --line-strong: #a2a7b0;
+  --accent: #164bdb; --accent-ink: #ffffff; --section-background: #f0f1f3;
+  --artwork-bg: #e9ebef; --button-bg: #16171b; --button-text: #ffffff; --button-hover: #34363e;
+}
+:root[data-theme='dark'] {
+  color-scheme: dark; --background: #101114; --surface: #191b20; --surface-raised: #292c33;
+  --text: #f6f7f9; --muted: #bcc0c9; --subtle: #a3a8b3; --line: #333741; --line-strong: #666d7a;
+  --accent: #91b5ff; --accent-ink: #101114; --section-background: #17191e;
+  --artwork-bg: #22252c; --button-bg: #f1f3f7; --button-text: #101114; --button-hover: #d8dce5;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; scrollbar-color: var(--subtle) var(--background); scrollbar-width: thin; }
+body { margin: 0; min-width: 320px; font-size: 1.125rem; }
+body, button, a { -webkit-tap-highlight-color: transparent; }
+button, a { touch-action: manipulation; outline-offset: 6px; }
+button, input { font: inherit; }
+button { color: inherit; cursor: pointer; background: none; border: 0; }
+a { color: inherit; text-decoration: none; }
+button:focus-visible, a:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--accent); }
+button:disabled { cursor: not-allowed; opacity: .45; }
+img, video { display: block; max-width: 100%; }
+img { height: auto; }
+svg { flex-shrink: 0; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { text-wrap: balance; }
+p { text-wrap: pretty; }
+::selection { background: var(--accent); color: var(--accent-ink); }
+::-webkit-scrollbar { width: 7px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--background); }
+::-webkit-scrollbar-thumb { background: var(--line); border-radius: 8px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}

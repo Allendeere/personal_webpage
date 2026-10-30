@@ -1,0 +1,281 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-30T11:37:51.602Z",
+  "title": "Design System: Sarah ? Personal Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "background": {
+        "role": "neutral",
+        "displayName": "Neutral white ? default"
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Cool gray surface"
+      },
+      "surface-raised": {
+        "role": "neutral",
+        "displayName": "Selected and hover surface"
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Near-black text"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Supporting text"
+      },
+      "subtle": {
+        "role": "neutral",
+        "displayName": "Metadata text"
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Interaction blue"
+      },
+      "button-bg": {
+        "role": "neutral",
+        "displayName": "Near-black primary action"
+      },
+      "artwork-bg": {
+        "role": "neutral",
+        "displayName": "Neutral screenshot stage"
+      },
+      "dark-background": {
+        "role": "neutral",
+        "displayName": "Cool charcoal ? dark theme"
+      },
+      "dark-accent": {
+        "role": "primary",
+        "displayName": "Interaction blue ? dark theme"
+      },
+      "dark-button-bg": {
+        "role": "neutral",
+        "displayName": "Light primary action ? dark theme"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Hero display",
+        "purpose": "Fluid English headline with restrained weight and tight tracking."
+      },
+      "headline": {
+        "displayName": "Section heading",
+        "purpose": "Work heading; biography and contact use related fluid scales."
+      },
+      "title": {
+        "displayName": "Project title",
+        "purpose": "28px desktop and 26px smaller-screen titles at the default root size."
+      },
+      "body": {
+        "displayName": "Reading text",
+        "purpose": "18px Traditional Chinese prose; biography measure 50ch. Preserve on mobile."
+      },
+      "lead": {
+        "displayName": "Introduction",
+        "purpose": "20px hero and project introductions; 18px at smaller widths."
+      },
+      "label": {
+        "displayName": "Supporting label",
+        "purpose": "15px metadata, with most controls and labels at 16px."
+      },
+      "caption": {
+        "displayName": "Minimum supporting text",
+        "purpose": "14px minimum for captions, project type, counts, and small feedback, including mobile."
+      },
+      "button": {
+        "displayName": "Primary action",
+        "purpose": "17px desktop text and 16px mobile text with large targets."
+      }
+    },
+    "shadows": [
+      {
+        "name": "project-screenshot",
+        "value": "0 14px 28px #00000012",
+        "purpose": "Soft shadow beneath screenshots inside neutral project stages."
+      },
+      {
+        "name": "mobile-navigation",
+        "value": "0 12px 24px #00000012",
+        "purpose": "Distinguishes the disclosed mobile menu."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.22,1,.36,1)",
+        "purpose": "Shared Motion curve and screenshot hover easing."
+      },
+      {
+        "name": "state-feedback",
+        "value": "200ms",
+        "purpose": "Action, link, and icon feedback."
+      },
+      {
+        "name": "featured-switch",
+        "value": "240ms",
+        "purpose": "Explicit featured screenshot changes."
+      },
+      {
+        "name": "dialog-entrance",
+        "value": "250ms",
+        "purpose": "Native modal contents entrance."
+      },
+      {
+        "name": "project-entrance",
+        "value": "380ms",
+        "purpose": "Once-per-view card appearance; zero duration for reduced motion."
+      },
+      {
+        "name": "screenshot-hover",
+        "value": "450ms",
+        "purpose": "Small lift and 1.015 scale inside the project stage."
+      },
+      {
+        "name": "hero-copy",
+        "value": "750ms",
+        "purpose": "Initial hero text entrance."
+      },
+      {
+        "name": "hero-visual",
+        "value": "850ms; delay 120ms",
+        "purpose": "Initial real screenshot entrance."
+      },
+      {
+        "name": "pointer-spring",
+        "value": "stiffness: 160; damping: 28",
+        "purpose": "Mouse-only tilt, at most 2deg vertically and 3deg horizontally."
+      },
+      {
+        "name": "filter-spring",
+        "value": "stiffness: 400; damping: 35",
+        "purpose": "Selected category surface follows the chosen filter."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "CSS durations; Motion also honors preference. Remove tilt, spatial entrances, hover transforms, progress line, and smooth scrolling."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow",
+        "value": "359px"
+      },
+      {
+        "name": "mobile",
+        "value": "640px"
+      },
+      {
+        "name": "stacked-layout",
+        "value": "820px"
+      },
+      {
+        "name": "compact-desktop",
+        "value": "1150px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Neutral filled work link; light and dark themes use their matching action pair.",
+      "html": "<a class=\"ds-primary\" href=\"#work\">??????<svg viewBox=\"0 0 24 24\" width=\"21\" height=\"21\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M12 4v16m-6-6 6 6 6-6\"/></svg></a>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:26px;min-height:56px;padding:15px 23px;border-radius:6px;background:var(--button-bg,#16171b);color:var(--button-text,#fff);font:550 1.0625rem 'Geist Variable','Noto Sans TC','Microsoft JhengHei',sans-serif;text-decoration:none;transition:transform .2s,background .2s}.ds-primary:hover{background:var(--button-hover,#34363e);transform:translateY(-2px)}.ds-primary:active{transform:scale(.98)}.ds-primary:focus-visible{outline:2px solid var(--accent,#164bdb);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-primary,.ds-primary:hover,.ds-primary:active{transition-duration:.01ms;transform:none}}.ds-primary svg{transition:transform .2s}.ds-primary:hover svg{transform:translateY(3px)}@media(prefers-reduced-motion:reduce){.ds-primary svg{transition-duration:.01ms}.ds-primary:hover svg{transform:none}}"
+    },
+    {
+      "name": "Outlined contact action",
+      "kind": "button",
+      "refersTo": "button-header",
+      "description": "Strong neutral border, readable label, and a minimum 48px target.",
+      "html": "<a class=\"ds-contact\" href=\"mailto:c27158495@gmail.com\">Let's talk<svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></a>",
+      "css": ".ds-contact{display:inline-flex;align-items:center;gap:22px;min-height:48px;padding:10px 18px;border:1px solid var(--line-strong,#a2a7b0);border-radius:6px;color:var(--text,#141519);font:400 1rem 'Geist Variable','Noto Sans TC','Microsoft JhengHei',sans-serif;text-decoration:none;transition:background .2s}.ds-contact:hover{background:var(--surface,#f0f1f3)}.ds-contact:focus-visible{outline:2px solid var(--accent,#164bdb);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-contact{transition-duration:.01ms;transform:none}}"
+    },
+    {
+      "name": "Close control",
+      "kind": "button",
+      "refersTo": "button-icon",
+      "description": "Functional icon control with a 48px target and modest rectangular corners.",
+      "html": "<button class=\"ds-icon\" aria-label=\"??????\"><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\"/></svg></button>",
+      "css": ".ds-icon{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border:0;border-radius:6px;background:transparent;color:var(--text,#141519);cursor:pointer;transition:background .2s,transform .2s}.ds-icon:hover{background:var(--surface-raised,#e5e7eb)}.ds-icon:active{transform:scale(.95)}.ds-icon:focus-visible{outline:2px solid var(--accent,#164bdb);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-icon,.ds-icon:active{transition-duration:.01ms;transform:none}}"
+    },
+    {
+      "name": "Selected category filter",
+      "kind": "chip",
+      "refersTo": "filter-selected",
+      "description": "Neutral selected surface, readable count, and explicit pressed state.",
+      "html": "<button class=\"ds-filter\" aria-pressed=\"true\"><span>????</span><small>8</small></button>",
+      "css": ".ds-filter{display:inline-flex;align-items:center;gap:8px;min-height:50px;padding:12px 16px;border:0;border-radius:6px;background:var(--surface-raised,#e5e7eb);color:var(--text,#141519);font:400 1rem 'Geist Variable','Noto Sans TC','Microsoft JhengHei',sans-serif;cursor:pointer}.ds-filter small{font-size:.875rem;color:var(--muted,#50545d)}.ds-filter:hover{color:var(--text,#141519)}.ds-filter:focus-visible{outline:2px solid var(--accent,#164bdb);outline-offset:6px}"
+    },
+    {
+      "name": "Main navigation",
+      "kind": "nav",
+      "description": "Chinese navigation labels with generous vertical padding and clear focus.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"????\"><a href=\"#work\">????</a><a href=\"#about\">???</a><a href=\"#contact\">???</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:36px;font-family:'Geist Variable','Noto Sans TC','Microsoft JhengHei',sans-serif}.ds-nav a{padding:16px 0;font-size:1.0625rem;color:var(--muted,#50545d);text-decoration:none;transition:color .2s}.ds-nav a:hover{color:var(--text,#141519)}.ds-nav a:focus-visible{outline:2px solid var(--accent,#164bdb);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-nav a{transition-duration:.01ms;transform:none}}"
+    },
+    {
+      "name": "Neutral project container",
+      "kind": "card",
+      "refersTo": "project-artwork",
+      "description": "Neutral stage and title shell; production inserts the supplied screenshot into the stage.",
+      "html": "<article class=\"ds-card\"><a href=\"#work\"><div class=\"ds-artwork\"><span>Desktop application</span></div><h3>NSPY</h3></a></article>",
+      "css": ".ds-card{font-family:'Geist Variable','Noto Sans TC','Microsoft JhengHei',sans-serif;color:var(--text,#141519)}.ds-card>a{display:block;color:inherit;text-decoration:none}.ds-artwork{position:relative;aspect-ratio:1.35;padding:60px 24px 24px;overflow:hidden;border-radius:12px;background:var(--artwork-bg,#e9ebef)}.ds-artwork>span{position:absolute;top:20px;left:24px;right:65px;font-size:.875rem;line-height:1.5;color:var(--muted,#50545d)}.ds-card h3{margin:24px 0 0;font-size:1.75rem;font-weight:550;letter-spacing:-.02em}.ds-card>a:focus-visible{outline:2px solid var(--accent,#164bdb);outline-offset:6px}"
+    },
+    {
+      "name": "Featured text selectors",
+      "kind": "nav",
+      "description": "Three explicit project choices; the active item has an underline rather than a filled enclosure.",
+      "html": "<div class=\"ds-selectors\" role=\"group\" aria-label=\"????????\"><button class=\"ds-active\" aria-pressed=\"true\">NSPY</button><button aria-pressed=\"false\">???</button><button aria-pressed=\"false\">??????</button></div>",
+      "css": ".ds-selectors{display:flex;gap:18px;border-bottom:1px solid var(--line,#d9dce2);font-family:'Geist Variable','Noto Sans TC','Microsoft JhengHei',sans-serif}.ds-selectors button{position:relative;min-height:52px;padding:10px 3px 17px;border:0;background:none;color:var(--muted,#50545d);font:400 1rem 'Geist Variable','Noto Sans TC','Microsoft JhengHei',sans-serif;cursor:pointer;transition:color .2s}.ds-selectors button:hover,.ds-selectors .ds-active{color:var(--text,#141519)}.ds-selectors .ds-active:after{position:absolute;bottom:-1px;left:0;right:0;content:'';height:2px;background:var(--text,#141519)}.ds-selectors button:focus-visible{outline:2px solid var(--accent,#164bdb);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-selectors button{transition-duration:.01ms;transform:none}}"
+    },
+    {
+      "name": "Sticky dialog control bar",
+      "kind": "custom",
+      "description": "Opaque theme-aware controls remain accessible during dialog scrolling; panel overflow is clip.",
+      "html": "<div class=\"ds-topbar\"><span>????<i></i>Desktop application</span><button class=\"ds-close\" aria-label=\"??????\"><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\"/></svg></button></div>",
+      "css": ".ds-topbar{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 26px;border-bottom:1px solid var(--line,#d9dce2);background:var(--background,#fafafa);font-family:'Geist Variable','Noto Sans TC','Microsoft JhengHei',sans-serif}.ds-topbar>span{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px 15px;font-size:.9375rem;line-height:1.6;color:var(--muted,#50545d)}.ds-topbar i{width:1px;height:14px;background:var(--line-strong,#a2a7b0)}.ds-close{display:inline-flex;flex-shrink:0;align-items:center;justify-content:center;width:48px;height:48px;border:0;border-radius:6px;background:none;color:var(--text,#141519);cursor:pointer;transition:background .2s,transform .2s}.ds-close:hover{background:var(--surface-raised,#e5e7eb)}.ds-close:active{transform:scale(.95)}.ds-close:focus-visible{outline:2px solid var(--accent,#164bdb);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-close,.ds-close:active{transition-duration:.01ms;transform:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Software Showroom",
+    "overview": "Clear, generous software presentation puts Sarah's actual work first. Neutral white, black, and cool gray combine with restrained blue interaction feedback, larger Traditional Chinese reading text, self-hosted Geist, and a generated S monogram. Light is the default, with a matching dark option. One real featured screenshot and explicit text selectors keep the work central.",
+    "keyCharacteristics": [
+      "18?20px reading text, 15?16px labels, and a 14px minimum at the default root size, including mobile.",
+      "48?56px controls with modest rectangular corners and 12px image containers.",
+      "An original generated S mark with source and derivative provenance.",
+      "Neutral stages, quiet depth, and subtle pointer feedback on real screenshots."
+    ],
+    "rules": [
+      {
+        "name": "The Role Rule",
+        "body": "Preserve theme-aware roles and readable contrast. Keep the interface neutral; reserve blue for meaningful interaction.",
+        "section": "colors"
+      },
+      {
+        "name": "The Readability Floor Rule",
+        "body": "Keep main prose at 18?20px and supporting text at least 14px at the default root size. Wrap before shrinking.",
+        "section": "typography"
+      },
+      {
+        "name": "The Quiet Depth Rule",
+        "body": "Let real artifact content supply complexity; keep interface structure flat and use the screenshot shadow sparingly.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do preserve readable text, wrapping, contrast, and generous controls on every viewport.",
+      "Do use public/brand/sarah-mark.png and retain public/brand/PROVENANCE.md with source and icon derivatives.",
+      "Do use real supplied screenshots and updated magnetic-chess imagery with provenance.",
+      "Do retain keyboard access, focus, explicit selection, and sticky dialog controls."
+    ],
+    "donts": [
+      "Do not restore the rejected palette, decorative symbols, synthetic window decoration, or multi-image hero ornamentation.",
+      "Do not shrink supporting text below the established minimum to force a layout.",
+      "Do not substitute a generic library glyph for the generated S mark.",
+      "Do not invent titles, dates, stacks, employers, repositories, metrics, testimonials, or outcomes.",
+      "Do not use outdated image_original.png, autoplay, scroll hijacking, or motion that ignores user preferences."
+    ]
+  }
+}

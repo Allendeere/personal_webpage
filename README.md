@@ -1,0 +1,75 @@
+# Sarah — Personal Portfolio
+
+以 React、Vite 與 Motion 製作的靜態個人作品集，適合部署於 GitHub Pages。主題是 **Logic meets possibility.**，以真實作品畫面呈現遊戲、桌面軟體、網頁與系統整合專案。
+
+## 本機預覽
+
+需要 Node.js 22.12 以上版本。
+
+```powershell
+cd personal_webpage.client
+npm.cmd install
+npm.cmd run dev
+```
+
+開啟終端機顯示的網址，通常是 `http://localhost:5173/`。Windows 使用 `npm.cmd` 可避開 PowerShell 的腳本執行政策限制；其他系統使用 `npm` 即可。
+
+## 發布到 GitHub Pages
+
+1. 將**整個專案根目錄**的原始碼推送至 GitHub 儲存庫的 `main` 分支，包含 `.github`、`personal_webpage.client` 與作品素材。
+2. 在 GitHub 儲存庫的 **Settings → Pages → Build and deployment → Source** 選擇 **GitHub Actions**。
+3. `.github/workflows/deploy.yml` 會在推送 `main` 時自動建置及發布。也可以從 **Actions → Deploy portfolio to GitHub Pages → Run workflow** 手動執行。
+4. 等待 Actions 完成；發布網址會顯示在部署工作與 Settings → Pages。
+
+若預設分支不是 `main`，請調整 workflow 中的 `branches`。這套流程依據 [GitHub Pages 官方自訂 workflow 文件](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) 設定。
+
+目前只完成本機實作與發布設定，尚未推送或發布到你的 GitHub 帳號。
+
+網站使用相對資源路徑與 hash 專案連結，可部署到 `username.github.io/repository/` 或自訂網域，重新整理專案詳情不需要伺服器路由設定。不需要執行 ASP.NET Server 專案。
+
+## 建置與驗證
+
+```powershell
+cd personal_webpage.client
+npm.cmd run build
+npm.cmd run lint
+npm.cmd run test:e2e
+```
+
+建置結果在 `personal_webpage.client/dist/`。Playwright 測試在 Windows 使用已安裝的 Microsoft Edge；Linux/macOS 首次執行前請先執行 `npx playwright install chromium`。測試使用真實靜態伺服器的 `/Personal_webpage/` 子路徑，涵蓋：
+
+- 真實圖片、字體與八件作品的載入。
+- 分類篩選、首頁焦點作品切換。
+- 專案詳情、相簿方向鍵、下一個專案、Esc 與返回導覽。
+- 深淺色模式記憶、Email 複製。
+- 320、390、768、1024、1440px 版面及減少動態效果設定。
+
+## 修改內容
+
+| 內容 | 檔案 |
+| --- | --- |
+| 姓名、Email、手機、作品說明與分類 | `personal_webpage.client/src/data.js` |
+| 版面與互動 | `personal_webpage.client/src/App.jsx` |
+| 顏色、字體與全域設定 | `personal_webpage.client/src/index.css` |
+| 元件與響應式樣式 | `personal_webpage.client/src/App.css` |
+| 圖片來源對照 | `personal_webpage.client/src/asset-manifest.json` |
+| 作品圖片及影片 | `personal_webpage.client/public/projects/` |
+| 網站 S 標誌與生成提示詞 | `personal_webpage.client/public/brand/` |
+| GitHub Pages 自動發布 | `.github/workflows/deploy.yml` |
+
+作品資料保留在本機原始碼，沒有後台或資料庫。已填入 Sarah、`c27158495@gmail.com` 與 `0966-377-190`。未提供的履歷、職稱、GitHub 個人連結及量化成效均未虛構。
+
+## 素材
+
+已匯入八個專案共 48 張 WebP 圖片及一支實機影片。圖片約從 23.2 MB 縮至 2.6 MB，文字內容未重新繪製。磁鐵棋依原始備註使用新版截圖，排除過時的整合海報；語言治療重複圖片也已排除。
+
+若需由原始資料夾重新準備素材：
+
+```powershell
+cd personal_webpage.client
+node scripts/prepare-assets.mjs 'C:\Users\User\Downloads\作品集'
+```
+
+此步驟只在更換素材時需要，GitHub Actions 直接使用已匯入的檔案，不依賴本機 Downloads 路徑。素材來源記錄在 `public/projects/PROVENANCE.md`；字體為自託管 Geist，圖示來自 Phosphor。
+
+設計依據與持續維護規範記錄於 `PRODUCT.md`、`DESIGN.md` 及 `.impeccable/`。

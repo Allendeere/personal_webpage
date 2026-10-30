@@ -1,0 +1,354 @@
+{
+  "launcher": [
+    {
+      "file": "projects/launcher/00.webp",
+      "original": "_v1_43AUiIC71MTANz_l5IjK.jpg",
+      "width": 704,
+      "height": 396,
+      "originalWidth": 704
+    },
+    {
+      "file": "projects/launcher/01.webp",
+      "original": "_v1_U85aJ4lUyDqYEsfk_Exr1vpCtxaCcT68zZZu.jpg",
+      "width": 704,
+      "height": 396,
+      "originalWidth": 704
+    },
+    {
+      "file": "projects/launcher/02.webp",
+      "original": "image_original (2).png",
+      "width": 1366,
+      "height": 1536,
+      "originalWidth": 1366
+    },
+    {
+      "file": "projects/launcher/03.webp",
+      "original": "螢幕擷取畫面 2024-01-06 031108.jpg",
+      "width": 1369,
+      "height": 759,
+      "originalWidth": 1369
+    }
+  ],
+  "pdf": [
+    {
+      "file": "projects/pdf/00.webp",
+      "original": "NSPY 的2複本.png",
+      "width": 791,
+      "height": 545,
+      "originalWidth": 791
+    },
+    {
+      "file": "projects/pdf/01.webp",
+      "original": "NSPY 的複本.png",
+      "width": 1366,
+      "height": 3072,
+      "originalWidth": 1366
+    },
+    {
+      "file": "projects/pdf/02.webp",
+      "original": "NSPY 的複本4.png",
+      "width": 547,
+      "height": 377,
+      "originalWidth": 547
+    }
+  ],
+  "nspy": [
+    {
+      "file": "projects/nspy/00.webp",
+      "original": "NSPY (1).png",
+      "width": 534,
+      "height": 345,
+      "originalWidth": 534
+    },
+    {
+      "file": "projects/nspy/01.webp",
+      "original": "NSPY (2).png",
+      "width": 534,
+      "height": 348,
+      "originalWidth": 534
+    },
+    {
+      "file": "projects/nspy/02.webp",
+      "original": "NSPY (3).png",
+      "width": 571,
+      "height": 326,
+      "originalWidth": 571
+    },
+    {
+      "file": "projects/nspy/03.webp",
+      "original": "NSPY (4).png",
+      "width": 534,
+      "height": 345,
+      "originalWidth": 534
+    },
+    {
+      "file": "projects/nspy/04.webp",
+      "original": "NSPY (5).png",
+      "width": 828,
+      "height": 399,
+      "originalWidth": 828
+    },
+    {
+      "file": "projects/nspy/05.webp",
+      "original": "NSPY.png",
+      "width": 791,
+      "height": 533,
+      "originalWidth": 791
+    },
+    {
+      "file": "projects/nspy/06.webp",
+      "original": "image.png",
+      "width": 1536,
+      "height": 1024,
+      "originalWidth": 1536
+    },
+    {
+      "file": "projects/nspy/07.webp",
+      "original": "image_6original.png",
+      "width": 1366,
+      "height": 3840,
+      "originalWidth": 1366
+    }
+  ],
+  "rental": [
+    {
+      "file": "projects/rental/00.webp",
+      "original": "image_original (3).png",
+      "width": 1366,
+      "height": 2304,
+      "originalWidth": 1366
+    },
+    {
+      "file": "projects/rental/01.webp",
+      "original": "小租家購物網站 (1).png",
+      "width": 547,
+      "height": 348,
+      "originalWidth": 547
+    },
+    {
+      "file": "projects/rental/02.webp",
+      "original": "小租家購物網站 (2).png",
+      "width": 828,
+      "height": 399,
+      "originalWidth": 828
+    },
+    {
+      "file": "projects/rental/03.webp",
+      "original": "小租家購物網站.png",
+      "width": 1076,
+      "height": 490,
+      "originalWidth": 1076
+    }
+  ],
+  "corporate": [
+    {
+      "file": "projects/corporate/00.webp",
+      "original": "螢幕擷取畫面 2026-10-30 165418.png",
+      "width": 1600,
+      "height": 1190,
+      "originalWidth": 1681
+    },
+    {
+      "file": "projects/corporate/01.webp",
+      "original": "螢幕擷取畫面 2026-10-30 183011.png",
+      "width": 1548,
+      "height": 1120,
+      "originalWidth": 1548
+    },
+    {
+      "file": "projects/corporate/02.webp",
+      "original": "螢幕擷取畫面 2026-10-30 183021.png",
+      "width": 1600,
+      "height": 1144,
+      "originalWidth": 1672
+    },
+    {
+      "file": "projects/corporate/03.webp",
+      "original": "螢幕擷取畫面 2026-10-30 183141.png",
+      "width": 1600,
+      "height": 1156,
+      "originalWidth": 1677
+    },
+    {
+      "file": "projects/corporate/04.webp",
+      "original": "螢幕擷取畫面 2026-10-30 183204.png",
+      "width": 485,
+      "height": 1056,
+      "originalWidth": 485
+    },
+    {
+      "file": "projects/corporate/05.webp",
+      "original": "螢幕擷取畫面 2026-10-30 183220.png",
+      "width": 482,
+      "height": 1057,
+      "originalWidth": 482
+    },
+    {
+      "file": "projects/corporate/06.webp",
+      "original": "螢幕擷取畫面 2026-10-30 183233.png",
+      "width": 1600,
+      "height": 1150,
+      "originalWidth": 1687
+    },
+    {
+      "file": "projects/corporate/07.webp",
+      "original": "螢幕擷取畫面 2026-10-30 183244.png",
+      "width": 487,
+      "height": 1055,
+      "originalWidth": 487
+    }
+  ],
+  "magnetic": [
+    {
+      "file": "projects/magnetic/00.webp",
+      "original": "UI 磁鐵棋 的複本 (2).png",
+      "width": 1600,
+      "height": 891,
+      "originalWidth": 1939
+    },
+    {
+      "file": "projects/magnetic/01.webp",
+      "original": "螢幕擷取畫面 2026-10-30 182147.png",
+      "width": 1025,
+      "height": 568,
+      "originalWidth": 1025
+    },
+    {
+      "file": "projects/magnetic/02.webp",
+      "original": "螢幕擷取畫面 2026-10-30 182201.png",
+      "width": 1031,
+      "height": 582,
+      "originalWidth": 1031
+    },
+    {
+      "file": "projects/magnetic/03.webp",
+      "original": "螢幕擷取畫面 2026-10-30 182318.png",
+      "width": 1030,
+      "height": 576,
+      "originalWidth": 1030
+    }
+  ],
+  "rhythm": [
+    {
+      "file": "projects/rhythm/00.webp",
+      "original": "image_original (1).png",
+      "width": 1366,
+      "height": 3072,
+      "originalWidth": 1366
+    },
+    {
+      "file": "projects/rhythm/01.webp",
+      "original": "辦公室遊戲 (1).png",
+      "width": 534,
+      "height": 345,
+      "originalWidth": 534
+    },
+    {
+      "file": "projects/rhythm/02.webp",
+      "original": "辦公室遊戲 (2).png",
+      "width": 540,
+      "height": 348,
+      "originalWidth": 540
+    },
+    {
+      "file": "projects/rhythm/03.webp",
+      "original": "辦公室遊戲.png",
+      "width": 571,
+      "height": 326,
+      "originalWidth": 571
+    }
+  ],
+  "speech": [
+    {
+      "file": "projects/speech/00.webp",
+      "original": "ogg.png",
+      "width": 704,
+      "height": 396,
+      "originalWidth": 704
+    },
+    {
+      "file": "projects/speech/01.webp",
+      "original": "original-41.png",
+      "width": 836,
+      "height": 623,
+      "originalWidth": 836
+    },
+    {
+      "file": "projects/speech/02.webp",
+      "original": "original-42.png",
+      "width": 583,
+      "height": 434,
+      "originalWidth": 583
+    },
+    {
+      "file": "projects/speech/03.webp",
+      "original": "original-43.png",
+      "width": 584,
+      "height": 440,
+      "originalWidth": 584
+    },
+    {
+      "file": "projects/speech/04.webp",
+      "original": "original-44.png",
+      "width": 582,
+      "height": 434,
+      "originalWidth": 582
+    },
+    {
+      "file": "projects/speech/05.webp",
+      "original": "original-45.png",
+      "width": 834,
+      "height": 621,
+      "originalWidth": 834
+    },
+    {
+      "file": "projects/speech/06.webp",
+      "original": "original-46.png",
+      "width": 585,
+      "height": 431,
+      "originalWidth": 585
+    },
+    {
+      "file": "projects/speech/07.webp",
+      "original": "original-47.png",
+      "width": 687,
+      "height": 507,
+      "originalWidth": 687
+    },
+    {
+      "file": "projects/speech/08.webp",
+      "original": "original-48.png",
+      "width": 581,
+      "height": 432,
+      "originalWidth": 581
+    },
+    {
+      "file": "projects/speech/09.webp",
+      "original": "original-49.png",
+      "width": 580,
+      "height": 440,
+      "originalWidth": 580
+    },
+    {
+      "file": "projects/speech/10.webp",
+      "original": "speech-therapy-h01.png",
+      "width": 687,
+      "height": 512,
+      "originalWidth": 687
+    },
+    {
+      "file": "projects/speech/11.webp",
+      "original": "speech-therapy-h02.png",
+      "width": 683,
+      "height": 515,
+      "originalWidth": 683
+    },
+    {
+      "file": "projects/speech/12.webp",
+      "original": "speech-therapy-h03.png",
+      "width": 688,
+      "height": 513,
+      "originalWidth": 688
+    }
+  ]
+}

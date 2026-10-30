@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.vs/
+**/bin/
+**/obj/
+.impeccable/cache/
+.impeccable/review/
+test-results/
+playwright-report/
+*.user
+*.suo
