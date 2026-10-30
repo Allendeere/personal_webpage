@@ -1,5 +1,5 @@
 import sharp from 'sharp'
-import { mkdir, readdir, writeFile, copyFile } from 'node:fs/promises'
+import { mkdir, readdir, readFile, writeFile, copyFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -7,6 +7,8 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const source = process.argv[2]
 if (!source) throw new Error('Usage: node scripts/prepare-assets.mjs <portfolio-directory>')
 const destination = path.join(root, 'public', 'projects')
+const editDirectory = path.join(root, 'scripts', 'asset-edits', 'corporate')
+const corporateEdits = JSON.parse(await readFile(path.join(editDirectory, 'regions.json'), 'utf8'))
 const folders = [
   ['launcher', '啟動器'],
   ['pdf', '桌面軟體/弄那個PDF的'],
@@ -31,10 +33,16 @@ for (const [slug, relative] of folders) {
     if (slug === 'magnetic' && file === 'image_original.png') continue
     if (slug === 'speech' && file === 'speech-therapy-h03 (1).png') continue
     const input = path.join(source, relative, file)
-    const name = `${String(index++).padStart(2, '0')}.webp`
+    const edit = slug === 'corporate' ? corporateEdits.find(item => item.original === file) : null
+    const name = `${String(index++).padStart(2, '0')}${edit ? '-unbranded' : ''}.webp`
     const image = sharp(input)
     const metadata = await image.metadata()
-    const result = await image.resize({ width: 1600, withoutEnlargement: true }).webp({ quality: 86, effort: 5 }).toFile(path.join(destination, slug, name))
+    let prepared = image.resize({ width: 1600, withoutEnlargement: true })
+    if (edit) {
+      const sized = await prepared.png().toBuffer()
+      prepared = sharp(sized).composite([{ input: path.join(editDirectory, edit.patch), left: edit.left, top: edit.top }])
+    }
+    const result = await prepared.webp(edit ? { lossless: true, effort: 5 } : { quality: 86, effort: 5 }).toFile(path.join(destination, slug, name))
     const { size } = await import('node:fs/promises').then(fs => fs.stat(input))
     originalBytes += size
     optimizedBytes += result.size
@@ -44,5 +52,5 @@ for (const [slug, relative] of folders) {
   if (video) await copyFile(path.join(source, relative, video), path.join(destination, slug, 'gameplay.mp4'))
 }
 await writeFile(path.join(root, 'src', 'asset-manifest.json'), JSON.stringify(manifest, null, 2) + '\n')
-await writeFile(path.join(destination, 'PROVENANCE.md'), '# Asset provenance\n\nAll project images and the gameplay video were supplied by Sarah from her portfolio directory. Images are resized and encoded as WebP without changing their content. Original filenames and dimensions are recorded in src/asset-manifest.json. The retired magnetic-game composite and duplicate speech-therapy image are excluded.\n')
+await writeFile(path.join(destination, 'PROVENANCE.md'), '# Asset provenance\n\nAll project images and the gameplay video were supplied by Sarah from her portfolio directory. Images are resized and encoded as WebP. At Sarah\'s request, the two company logos and their wordmarks were removed from the header regions of all eight corporate website screenshots on 2026-10-31 using imagegen edits composited into the original images. Other image content is preserved. Edit regions, patches, and the exact prompt are recorded in scripts/asset-edits/corporate/. Original filenames and dimensions are recorded in src/asset-manifest.json. The retired magnetic-game composite and duplicate speech-therapy image are excluded.\n')
 console.log(`Prepared ${Object.values(manifest).flat().length} images: ${(originalBytes / 1e6).toFixed(1)} MB → ${(optimizedBytes / 1e6).toFixed(1)} MB. Gameplay video copied.`)

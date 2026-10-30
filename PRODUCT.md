@@ -20,6 +20,7 @@ Prospective collaborators and recruiters reviewing Sarah's work (inferred from t
 - Retain the existing React + Vite client scaffold; the ASP.NET project is not required for this website.
 - Include all eight project folders provided in `C:/Users/User/Downloads/作品集`.
 - Use the updated magnetic chess screenshots, as requested in the supplied project notes. Do not use its outdated `image_original.png`.
+- Remove the CHUN MILE and DRAGON MILE header logos and wordmarks from every corporate-website screenshot, per Sarah's 2026-10-31 request. Keep the remaining screenshot content intact, including the original navigation and body text. Re-importing assets must preserve these edits.
 - Sarah approved building directly in code.
 - Confirmed contact: `c27158495@gmail.com`, `0966-377-190`.
 - Sarah has not supplied an official professional title, résumé, GitHub profile, project repositories, dates, quantitative outcomes, or technology stacks. Do not fabricate these.
