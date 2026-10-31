@@ -35,7 +35,7 @@ for (const [slug, relative] of folders) {
     const input = path.join(source, relative, file)
     const edits = slug === 'corporate' ? corporateEdits.filter(item => item.original === file) : []
     const number = String(index++).padStart(2, '0')
-    const name = `${number}${edits.length ? '-anonymous' : slug === 'speech' ? '-refined' : ''}.webp`
+    const name = `${number}${edits.length ? '-anonymous' : ''}.webp`
     const image = sharp(input)
     const metadata = await image.metadata()
     let prepared = image.resize({ width: 1600, withoutEnlargement: true })
@@ -43,11 +43,7 @@ for (const [slug, relative] of folders) {
       const sized = await prepared.png().toBuffer()
       prepared = sharp(sized).composite(edits.map(edit => ({ input: path.join(editDirectory, edit.patch), left: edit.left, top: edit.top })))
     }
-    if (slug === 'speech') {
-      // These reviewed derivatives retain the original UI and data while refining the artwork.
-      prepared = sharp(await readFile(path.join(root, 'scripts', 'asset-edits', 'speech', `${number}.webp`)))
-    }
-    const result = await prepared.webp(edits.length || slug === 'speech' ? { lossless: true, effort: 5 } : { quality: 86, effort: 5 }).toFile(path.join(destination, slug, name))
+    const result = await prepared.webp(edits.length ? { lossless: true, effort: 5 } : { quality: 86, effort: 5 }).toFile(path.join(destination, slug, name))
     const { size } = await import('node:fs/promises').then(fs => fs.stat(input))
     originalBytes += size
     optimizedBytes += result.size

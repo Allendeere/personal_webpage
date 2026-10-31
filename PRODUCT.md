@@ -21,7 +21,7 @@ Prospective collaborators and recruiters reviewing Sarah's work (inferred from t
 - Include all eight project folders provided in `C:/Users/User/Downloads/作品集`.
 - Use the updated magnetic chess screenshots, as requested in the supplied project notes. Do not use its outdated `image_original.png`.
 - Remove both company identities from every corporate-website screenshot. Sarah's 2026-11-01 clarification extends the previous header-logo removal to Chinese and English company names in navigation, headings, paragraphs, and illustration labels. Replace these with neutral wording while keeping the screenshot layout. Re-importing assets must preserve the edits.
-- Refine only the speech-game images with subtle background, color, and illustration changes. Keep the existing game scenes, interface structure, interactions, and content. Preserve original dialogue, records, calendar values, and statistical graphs. Other projects receive no visual restyling.
+- Sarah rejected the speech-game image restyling on 2026-11-01 because it appeared blurrier. Use the original thirteen supplied screenshot derivatives from before the restyling, with no generated textures, recoloring, or illustration edits. Future asset imports must continue to use the originals. The corporate screenshot anonymization remains in place.
 - Sarah approved building directly in code.
 - Confirmed contact: `c27158495@gmail.com`, `0966-377-190`.
 - Sarah confirmed that her primary work on the speech-therapy game is Unity game development. Its copy should emphasize this implementation role. Other technology stacks, an official professional title, résumé, GitHub profile, project repositories, dates, and quantitative outcomes remain unconfirmed; do not fabricate these.
