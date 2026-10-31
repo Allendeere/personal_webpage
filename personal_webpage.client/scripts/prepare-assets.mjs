@@ -33,16 +33,21 @@ for (const [slug, relative] of folders) {
     if (slug === 'magnetic' && file === 'image_original.png') continue
     if (slug === 'speech' && file === 'speech-therapy-h03 (1).png') continue
     const input = path.join(source, relative, file)
-    const edit = slug === 'corporate' ? corporateEdits.find(item => item.original === file) : null
-    const name = `${String(index++).padStart(2, '0')}${edit ? '-unbranded' : ''}.webp`
+    const edits = slug === 'corporate' ? corporateEdits.filter(item => item.original === file) : []
+    const number = String(index++).padStart(2, '0')
+    const name = `${number}${edits.length ? '-anonymous' : slug === 'speech' ? '-refined' : ''}.webp`
     const image = sharp(input)
     const metadata = await image.metadata()
     let prepared = image.resize({ width: 1600, withoutEnlargement: true })
-    if (edit) {
+    if (edits.length) {
       const sized = await prepared.png().toBuffer()
-      prepared = sharp(sized).composite([{ input: path.join(editDirectory, edit.patch), left: edit.left, top: edit.top }])
+      prepared = sharp(sized).composite(edits.map(edit => ({ input: path.join(editDirectory, edit.patch), left: edit.left, top: edit.top })))
     }
-    const result = await prepared.webp(edit ? { lossless: true, effort: 5 } : { quality: 86, effort: 5 }).toFile(path.join(destination, slug, name))
+    if (slug === 'speech') {
+      // These reviewed derivatives retain the original UI and data while refining the artwork.
+      prepared = sharp(await readFile(path.join(root, 'scripts', 'asset-edits', 'speech', `${number}.webp`)))
+    }
+    const result = await prepared.webp(edits.length || slug === 'speech' ? { lossless: true, effort: 5 } : { quality: 86, effort: 5 }).toFile(path.join(destination, slug, name))
     const { size } = await import('node:fs/promises').then(fs => fs.stat(input))
     originalBytes += size
     optimizedBytes += result.size
@@ -52,5 +57,5 @@ for (const [slug, relative] of folders) {
   if (video) await copyFile(path.join(source, relative, video), path.join(destination, slug, 'gameplay.mp4'))
 }
 await writeFile(path.join(root, 'src', 'asset-manifest.json'), JSON.stringify(manifest, null, 2) + '\n')
-await writeFile(path.join(destination, 'PROVENANCE.md'), '# Asset provenance\n\nAll project images and the gameplay video were supplied by Sarah from her portfolio directory. Images are resized and encoded as WebP. At Sarah\'s request, the two company logos and their wordmarks were removed from the header regions of all eight corporate website screenshots on 2026-10-31 using imagegen edits composited into the original images. Other image content is preserved. Edit regions, patches, and the exact prompt are recorded in scripts/asset-edits/corporate/. Original filenames and dimensions are recorded in src/asset-manifest.json. The retired magnetic-game composite and duplicate speech-therapy image are excluded.\n')
+await copyFile(path.join(root, 'scripts', 'asset-edits', 'PROVENANCE.md'), path.join(destination, 'PROVENANCE.md'))
 console.log(`Prepared ${Object.values(manifest).flat().length} images: ${(originalBytes / 1e6).toFixed(1)} MB → ${(optimizedBytes / 1e6).toFixed(1)} MB. Gameplay video copied.`)

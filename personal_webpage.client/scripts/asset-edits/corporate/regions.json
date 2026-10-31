@@ -62,5 +62,125 @@
     "top": 12,
     "width": 200,
     "height": 78
+  },
+  {
+    "original": "螢幕擷取畫面 2026-10-30 165418.png",
+    "patch": "names/00.png",
+    "left": 1540,
+    "top": 250,
+    "width": 32,
+    "height": 275
+  },
+  {
+    "original": "螢幕擷取畫面 2026-10-30 183011.png",
+    "patch": "names/01.png",
+    "left": 930,
+    "top": 91,
+    "width": 78,
+    "height": 26
+  },
+  {
+    "original": "螢幕擷取畫面 2026-10-30 183021.png",
+    "patch": "names/02.png",
+    "left": 889,
+    "top": 107,
+    "width": 90,
+    "height": 27
+  },
+  {
+    "original": "螢幕擷取畫面 2026-10-30 183141.png",
+    "patch": "names/03.png",
+    "left": 889,
+    "top": 124,
+    "width": 90,
+    "height": 29
+  },
+  {
+    "original": "螢幕擷取畫面 2026-10-30 183141.png",
+    "patch": "names/04.png",
+    "left": 100,
+    "top": 261,
+    "width": 160,
+    "height": 23
+  },
+  {
+    "original": "螢幕擷取畫面 2026-10-30 183141.png",
+    "patch": "names/05.png",
+    "left": 945,
+    "top": 344,
+    "width": 365,
+    "height": 34
+  },
+  {
+    "original": "螢幕擷取畫面 2026-10-30 183141.png",
+    "patch": "names/06.png",
+    "left": 1178,
+    "top": 414,
+    "width": 51,
+    "height": 32
+  },
+  {
+    "original": "螢幕擷取畫面 2026-10-30 183141.png",
+    "patch": "names/07.png",
+    "left": 872,
+    "top": 933,
+    "width": 51,
+    "height": 34
+  },
+  {
+    "original": "螢幕擷取畫面 2026-10-30 183141.png",
+    "patch": "names/08.png",
+    "left": 1182,
+    "top": 1090,
+    "width": 51,
+    "height": 34
+  },
+  {
+    "original": "螢幕擷取畫面 2026-10-30 183204.png",
+    "patch": "names/09.png",
+    "left": 246,
+    "top": 541,
+    "width": 51,
+    "height": 33
+  },
+  {
+    "original": "螢幕擷取畫面 2026-10-30 183220.png",
+    "patch": "names/10.png",
+    "left": 31,
+    "top": 270,
+    "width": 122,
+    "height": 39
+  },
+  {
+    "original": "螢幕擷取畫面 2026-10-30 183233.png",
+    "patch": "names/11.png",
+    "left": 59,
+    "top": 178,
+    "width": 215,
+    "height": 31
+  },
+  {
+    "original": "螢幕擷取畫面 2026-10-30 183233.png",
+    "patch": "names/12.png",
+    "left": 1405,
+    "top": 198,
+    "width": 144,
+    "height": 30
+  },
+  {
+    "original": "螢幕擷取畫面 2026-10-30 183233.png",
+    "patch": "names/13.png",
+    "left": 57,
+    "top": 253,
+    "width": 302,
+    "height": 85
+  },
+  {
+    "original": "螢幕擷取畫面 2026-10-30 183244.png",
+    "patch": "names/14.png",
+    "left": 319,
+    "top": 174,
+    "width": 149,
+    "height": 29
   }
 ]
