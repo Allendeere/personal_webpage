@@ -23,7 +23,7 @@ Prospective collaborators and recruiters reviewing Sarah's work (inferred from t
 - Remove the CHUN MILE and DRAGON MILE header logos and wordmarks from every corporate-website screenshot, per Sarah's 2026-10-31 request. Keep the remaining screenshot content intact, including the original navigation and body text. Re-importing assets must preserve these edits.
 - Sarah approved building directly in code.
 - Confirmed contact: `c27158495@gmail.com`, `0966-377-190`.
-- Sarah has not supplied an official professional title, résumé, GitHub profile, project repositories, dates, quantitative outcomes, or technology stacks. Do not fabricate these.
+- Sarah confirmed that her primary work on the speech-therapy game is Unity game development. Its copy should emphasize this implementation role. Other technology stacks, an official professional title, résumé, GitHub profile, project repositories, dates, and quantitative outcomes remain unconfirmed; do not fabricate these.
 
 ## Brand Commitments
 
